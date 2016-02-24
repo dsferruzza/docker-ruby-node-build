@@ -19,6 +19,7 @@ RUN apt-get update \
  ruby \
  ruby-dev \
  bundler \
+ build-essential \
  nodejs \
  && ln -f -s /usr/bin/nodejs /usr/bin/node \
  # Slim down image
