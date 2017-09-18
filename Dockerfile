@@ -12,7 +12,7 @@ RUN apt-get update \
  ca-certificates \
  gnupg2 \
  && curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - \
- && echo "deb https://deb.nodesource.com/node_6.x jessie main" > /etc/apt/sources.list.d/nodesource.list \
+ && echo "deb https://deb.nodesource.com/node_8.x jessie main" > /etc/apt/sources.list.d/nodesource.list \
 # Install tools
  && apt-get update \
  && apt-get install --no-install-recommends -y \
@@ -22,7 +22,6 @@ RUN apt-get update \
  bundler \
  build-essential \
  nodejs \
- && ln -f -s /usr/bin/nodejs /usr/bin/node \
  # Slim down image
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/man/?? /usr/share/man/??_*
